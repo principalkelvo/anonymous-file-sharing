@@ -1,124 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="mainContainer">
-        <!-- small rectangle with all content  -->
-        <div class="container">
-
-            <!-- header -->
-            <div class="header">
-                <!-- title -->
-                <div class="title">
-                    <h1>Upload Files</h1>
-                </div>
-                <!-- subtitle -->
-                <div class="subtitle">
-                    <h2>Upload documents you want<br>
-                        to share anonymously</h2>
-                </div>
-            </div>
-
-            <!-- body -->
-            <div class="rowBody">
-
-                <!-- add file field -->
-                <div class="addFileField">
-                    <!-- logo -->
-                    <div class="logo">
-                        <!-- svg file -->
-                        <svg width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M53.625 78.375V61.875H66L49.5 41.25L33 61.875H45.375V78.375H53.625Z" fill="#00759D"/>
-                            <path d="M28.875 78.375H37.125V70.125H28.875C22.0523 70.125 16.5 64.5728 16.5 57.75C16.5 51.9585 21.4459 46.3815 27.5261 45.3131L29.9228 44.8924L30.7148 42.5906C33.6146 34.1302 40.8169 28.875 49.5 28.875C60.8726 28.875 70.125 38.1274 70.125 49.5V53.625H74.25C78.7999 53.625 82.5 57.3251 82.5 61.875C82.5 66.4249 78.7999 70.125 74.25 70.125H61.875V78.375H74.25C83.3498 78.375 90.75 70.9748 90.75 61.875C90.7437 58.1774 89.4986 54.5885 87.2136 51.6814C84.9286 48.7743 81.7355 46.7167 78.144 45.837C76.3414 31.6388 64.185 20.625 49.5 20.625C38.1315 20.625 28.2563 27.2704 23.7476 37.7437C14.8871 40.392 8.25 48.7575 8.25 57.75C8.25 69.1226 17.5024 78.375 28.875 78.375Z" fill="url(#paint0_linear_4_56)"/>
-                            <defs>
-                            <linearGradient id="paint0_linear_4_56" x1="49.5" y1="20.625" x2="49.5" y2="78.375" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#009BD0"/>
-                            <stop offset="1" stop-color="#00759D"/>
-                            </linearGradient>
-                            </defs>
-                            </svg>                            
-                    </div>
-
-                    <!-- Drag and drop content area-->
-                    <!-- or -->
-                    <div class="dragDrop">
-                        <p>Drag & Drop your files here</p>
-                        <p>OR</p>
-                    </div>
-                    
-                    <!-- browse files button -->
-                    <div class="browse button">
-                        <button>Browse Files</button>
-                    </div>
-                </div>
-                
-                <!-- upload button -->
-                <div class="upload button">
-                    <button>Upload</button>
-                </div>
-
-                <!-- file view -->
-                <div class="fileView">
-
-                    <!-- upload file title -->
-                    <div class="subtitle">
-                        <h2>Uploading files</h2>
-                    </div>
-
-                    <!--show uploads  -->
-                    <div class="showUploads">
-                        <!-- file uploading -->
-                        <div class="fileUpload">
-                            <!-- file type -->
-                            <div class="fileType">
-
-                            </div>
-
-                            <!-- upload progress -->
-                            <div class="fileProgress">
-                                <!-- file bio and progress in percentage -->
-                                <div class="fileBio">                                    
-                                    <!-- file name and size -->
-                                    <div class="fileNameSize">
-
-                                        <!-- file name -->
-                                        <div class="fileName">
-                                            <p>file.txt</p>
-                                        </div>
-                                    </div>
-                                    <!-- progress percentage -->
-                                    <div class="progressPerc">
-                                        <p>20%</p>
-                                    </div>
-                                </div>
-
-                                <div class="progressBar">
-
-                                </div>
-
-                            </div>
-
-                            <!-- upload status/ cancel upload -->
-                            <div class="status">
-                                
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- small rectangle with all content  -->
+      <div class="container">
+        <!-- header -->
+        <div class="header">
+          <!-- title -->
+          <div class="title">
+            <h1>Upload Files</h1>
+          </div>
+          <!-- subtitle -->
+          <div class="subtitle">
+            <h2>
+              Upload documents you want<br />
+              to share anonymously
+            </h2>
+          </div>
         </div>
+
+        <!-- body -->
+        <div class="rowBody">
+          <!-- add file field -->
+          <div class="addFileField">
+            <!-- logo -->
+            <div class="logo">
+              <!-- svg file -->
+              <svg
+                width="99"
+                height="99"
+                viewBox="0 0 99 99"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M53.625 78.375V61.875H66L49.5 41.25L33 61.875H45.375V78.375H53.625Z"
+                  fill="#00759D"
+                />
+                <path
+                  d="M28.875 78.375H37.125V70.125H28.875C22.0523 70.125 16.5 64.5728 16.5 57.75C16.5 51.9585 21.4459 46.3815 27.5261 45.3131L29.9228 44.8924L30.7148 42.5906C33.6146 34.1302 40.8169 28.875 49.5 28.875C60.8726 28.875 70.125 38.1274 70.125 49.5V53.625H74.25C78.7999 53.625 82.5 57.3251 82.5 61.875C82.5 66.4249 78.7999 70.125 74.25 70.125H61.875V78.375H74.25C83.3498 78.375 90.75 70.9748 90.75 61.875C90.7437 58.1774 89.4986 54.5885 87.2136 51.6814C84.9286 48.7743 81.7355 46.7167 78.144 45.837C76.3414 31.6388 64.185 20.625 49.5 20.625C38.1315 20.625 28.2563 27.2704 23.7476 37.7437C14.8871 40.392 8.25 48.7575 8.25 57.75C8.25 69.1226 17.5024 78.375 28.875 78.375Z"
+                  fill="url(#paint0_linear_4_56)"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_4_56"
+                    x1="49.5"
+                    y1="20.625"
+                    x2="49.5"
+                    y2="78.375"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stop-color="#009BD0" />
+                    <stop offset="1" stop-color="#00759D" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+
+            <!-- Drag and drop content area-->
+            <!-- or -->
+            <div class="dragDrop">
+              <p>Drag & Drop your files here</p>
+              <p>OR</p>
+            </div>
+
+            <!-- browse files button -->
+            <div class="browse button">
+              <button>Browse Files</button>
+            </div>
+          </div>
+
+          <!-- upload button -->
+          <div class="upload button">
+            <button>Upload</button>
+          </div>
+
+          <!-- file view -->
+          <div class="fileView">
+            <!-- upload file title -->
+            <div class="subtitle">
+              <h2>Uploading files</h2>
+            </div>
+
+            <!--show uploads  -->
+            <div class="showUploads">
+              <!-- file uploading -->
+              <div class="fileUpload">
+                <!-- file type -->
+                <div class="fileType"></div>
+
+                <!-- upload progress -->
+                <div class="fileProgress">
+                  <!-- file bio and progress in percentage -->
+                  <div class="fileBio">
+                    <!-- file name and size -->
+                    <div class="fileNameSize">
+                      <!-- file name -->
+                      <div class="fileName">
+                        <p>file.txt</p>
+                      </div>
+                    </div>
+                    <!-- progress percentage -->
+                    <div class="progressPerc">
+                      <p>20%</p>
+                    </div>
+                  </div>
+
+                  <div class="progressBar"></div>
+                </div>
+
+                <!-- upload status/ cancel upload -->
+                <div class="status">
+                  <div class="close">
+                    <svg
+                      width="34"
+                      height="34"
+                      viewBox="0 0 34 34"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="17"
+                        cy="17"
+                        r="17"
+                        fill="#009BD0"
+                        fill-opacity="0.52"
+                      />
+                      <path
+                        d="M14.5909 7.54545L17.7784 13.0597H17.9148L21.1364 7.54545H25.858L20.5909 16.2727L26.0284 25H21.1875L17.9148 19.4261H17.7784L14.5057 25H9.69886L15.1108 16.2727L9.83523 7.54545H14.5909Z"
+                        fill="#00759D"
+                      />
+                    </svg>
+                  </div>
+                  <div class="success">
+                    <svg
+                      width="25"
+                      height="25"
+                      viewBox="0 0 25 25"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.49112 21.4553L0.366116 13.3303C-0.122018 12.8421 -0.122018 12.0507 0.366116 11.5625L2.13384 9.79472C2.62198 9.30654 3.41348 9.30654 3.90161 9.79472L9.375 15.2681L21.0984 3.54472C21.5865 3.05659 22.378 3.05659 22.8662 3.54472L24.6339 5.31249C25.122 5.80063 25.122 6.59208 24.6339 7.08027L10.2589 21.4553C9.77071 21.9435 8.97925 21.9435 8.49112 21.4553Z"
+                        fill="#58CD21"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-   
-</body>
+  </body>
 </html>
- <!-- <form id="form">
+<!-- <form id="form">
         <input type="file" name="file" id="file" />
         <input type="submit" value="Upload" />
     </form>
