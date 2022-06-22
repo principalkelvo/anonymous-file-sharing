@@ -56,8 +56,8 @@ body .container {
   flex-direction: column;
   padding: 0.8rem 2.5rem;
   margin: 1rem 0 0;
-  width: 100%;
-  height: 100%;
+  width: 15rem;
+  height: 11rem;
   background: #009bd026;
   border: 1px dashed #00759d;
   border-radius: 0.625rem;
@@ -170,4 +170,15 @@ p {
 
 .success{
     display: none;
+}
+
+/* drop area image size */
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.drag-area.active{
+  border: 2px solid #fff;
 }
