@@ -30,61 +30,61 @@
         <div class="rowBody">
           <!-- add file field -->
           <form id="form">
-          <div class="addFileField">
-            <!-- logo -->
-            <div class="logo">
-              <!-- svg file -->
-              <svg
-                width="99"
-                height="99"
-                viewBox="0 0 99 99"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M53.625 78.375V61.875H66L49.5 41.25L33 61.875H45.375V78.375H53.625Z"
-                  fill="#00759D"
-                />
-                <path
-                  d="M28.875 78.375H37.125V70.125H28.875C22.0523 70.125 16.5 64.5728 16.5 57.75C16.5 51.9585 21.4459 46.3815 27.5261 45.3131L29.9228 44.8924L30.7148 42.5906C33.6146 34.1302 40.8169 28.875 49.5 28.875C60.8726 28.875 70.125 38.1274 70.125 49.5V53.625H74.25C78.7999 53.625 82.5 57.3251 82.5 61.875C82.5 66.4249 78.7999 70.125 74.25 70.125H61.875V78.375H74.25C83.3498 78.375 90.75 70.9748 90.75 61.875C90.7437 58.1774 89.4986 54.5885 87.2136 51.6814C84.9286 48.7743 81.7355 46.7167 78.144 45.837C76.3414 31.6388 64.185 20.625 49.5 20.625C38.1315 20.625 28.2563 27.2704 23.7476 37.7437C14.8871 40.392 8.25 48.7575 8.25 57.75C8.25 69.1226 17.5024 78.375 28.875 78.375Z"
-                  fill="url(#paint0_linear_4_56)"
-                />
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_4_56"
-                    x1="49.5"
-                    y1="20.625"
-                    x2="49.5"
-                    y2="78.375"
-                    gradientUnits="userSpaceOnUse"
-                  >
-                    <stop stop-color="#009BD0" />
-                    <stop offset="1" stop-color="#00759D" />
-                  </linearGradient>
-                </defs>
-              </svg>
+            <div class="addFileField drag-area">
+              <!-- logo -->
+              <div class="logo">
+                <!-- svg file -->
+                <svg
+                  width="99"
+                  height="99"
+                  viewBox="0 0 99 99"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M53.625 78.375V61.875H66L49.5 41.25L33 61.875H45.375V78.375H53.625Z"
+                    fill="#00759D"
+                  />
+                  <path
+                    d="M28.875 78.375H37.125V70.125H28.875C22.0523 70.125 16.5 64.5728 16.5 57.75C16.5 51.9585 21.4459 46.3815 27.5261 45.3131L29.9228 44.8924L30.7148 42.5906C33.6146 34.1302 40.8169 28.875 49.5 28.875C60.8726 28.875 70.125 38.1274 70.125 49.5V53.625H74.25C78.7999 53.625 82.5 57.3251 82.5 61.875C82.5 66.4249 78.7999 70.125 74.25 70.125H61.875V78.375H74.25C83.3498 78.375 90.75 70.9748 90.75 61.875C90.7437 58.1774 89.4986 54.5885 87.2136 51.6814C84.9286 48.7743 81.7355 46.7167 78.144 45.837C76.3414 31.6388 64.185 20.625 49.5 20.625C38.1315 20.625 28.2563 27.2704 23.7476 37.7437C14.8871 40.392 8.25 48.7575 8.25 57.75C8.25 69.1226 17.5024 78.375 28.875 78.375Z"
+                    fill="url(#paint0_linear_4_56)"
+                  />
+                  <defs>
+                    <linearGradient
+                      id="paint0_linear_4_56"
+                      x1="49.5"
+                      y1="20.625"
+                      x2="49.5"
+                      y2="78.375"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="#009BD0" />
+                      <stop offset="1" stop-color="#00759D" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+
+              <!-- Drag and drop content area-->
+              <!-- or -->
+              <div class="dragDrop">
+                <p class="dragHeader">Drag & Drop your files here</p>
+                <p>OR</p>
+              </div>
+
+              <!-- browse files button -->
+              <div class="browse button">
+                <button id="browseFile">Browse Files</button>
+                <input type="file" name="file" id="file" hidden />
+              </div>
             </div>
 
-            <!-- Drag and drop content area-->
-            <!-- or -->
-            <div class="dragDrop">
-              <p>Drag & Drop your files here</p>
-              <p>OR</p>
+            <!-- upload button -->
+            <div class="upload button">
+              <button id="submit-btn">Upload</button>
+              <input type="submit" value="Upload" id="upload" hidden />
             </div>
-
-            <!-- browse files button -->
-            <div class="browse button">
-              <button id="browseFile">Browse Files</button>
-              <input type="file" name="file" id="file" hidden/>
-            </div>
-          </div>
-
-          <!-- upload button -->
-          <div class="upload button">
-            <!-- <button id="submit">Upload</button> -->
-            <input type="submit" value="Upload" id="upload"/>
-          </div>
-        </form>
+          </form>
 
           <!-- file view -->
           <div class="fileView">
@@ -165,7 +165,6 @@
       </div>
     </div>
     <script src="./assets/js/script.js"></script>
-
   </body>
 </html>
 <!-- <form id="form">
