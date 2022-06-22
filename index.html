@@ -29,6 +29,7 @@
         <!-- body -->
         <div class="rowBody">
           <!-- add file field -->
+          <form id="form">
           <div class="addFileField">
             <!-- logo -->
             <div class="logo">
@@ -73,14 +74,17 @@
 
             <!-- browse files button -->
             <div class="browse button">
-              <button>Browse Files</button>
+              <button id="browseFile">Browse Files</button>
+              <input type="file" name="file" id="file" hidden/>
             </div>
           </div>
 
           <!-- upload button -->
           <div class="upload button">
-            <button>Upload</button>
+            <!-- <button id="submit">Upload</button> -->
+            <input type="submit" value="Upload" id="upload"/>
           </div>
+        </form>
 
           <!-- file view -->
           <div class="fileView">
@@ -160,10 +164,11 @@
         </div>
       </div>
     </div>
+    <script src="./assets/js/script.js"></script>
+
   </body>
 </html>
 <!-- <form id="form">
         <input type="file" name="file" id="file" />
         <input type="submit" value="Upload" />
-    </form>
-    <script src="./assets/js/script.js"></script> -->
+    </form>-->
