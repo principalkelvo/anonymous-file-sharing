@@ -49,6 +49,8 @@ form.addEventListener("submit", async function (event) {
     .then((response) => response.json())// if the response is a JSON object
     .then((result) => {
       console.log("Success:", result); // Handle the success response object
+      if (result) {progressBar()}
+
     })
     .catch((error) => {
       console.error("Error:", error);// Handle the error response object
@@ -94,6 +96,7 @@ dropArea.addEventListener("drop", (event)=>{
   showFile(); //calling function
 });
 
+//file preview
 function showFile(){
   let fileType = file.type; //getting selected file type
   let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
@@ -113,4 +116,13 @@ function showFile(){
     dropArea.classList.remove("active");
     dragText.textContent = "Drag & Drop to Upload File";
   }
+}
+
+//progressBar
+function progressBar(){
+ let progressIndicator= document.querySelector(".progressIndicator");
+  progressIndicator.style.animation = "progress 6s";
+  progressIndicator.style.width = "100%";
+  document.querySelector(".close").style.display = "none";
+  document.querySelector(".success").style.display = "block";
 }
