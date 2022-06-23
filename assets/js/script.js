@@ -1,9 +1,8 @@
 // Select your form for submition
 let form = document.getElementById("form");
 let file;
+let link;
 
-//LOADER
-let isLoading = false; 
 
 // Select your input type file and store it in a variable
 let input = document.getElementById('file');
@@ -21,14 +20,12 @@ const submitBtn= document.getElementById("submit-btn");
 
 //submit the form
 form.addEventListener("submit", async function (event) {
-  isLoading = true;
-  console.log(isLoading);
   event.preventDefault();
-  //create a formdata object
-  console.log("formdata"+" what is uploaded")
-  console.log(input.files[0]);
-  console.log(file);
-  console.log("formdata"+" what has been uploaded")
+  // create a formdata object
+  // console.log("formdata"+" what is uploaded")
+  // console.log(input.files[0]);
+  // console.log(file);
+  // console.log("formdata"+" what has been uploaded")
 
   let data = new FormData();
   // data.append("file", input.files[0]);
@@ -47,15 +44,15 @@ form.addEventListener("submit", async function (event) {
     .then((response) => response.json())// if the response is a JSON object
     .then((result) => {
       console.log("Success:", result); // Handle the success response object
-      if (result) {progressBar()}
+      if (result) {link = result.link; 
+        progressBar(); 
+        linkView();} // Handle the success response object}
 
     })
     .catch((error) => {
       console.error("Error:", error);// Handle the error response object
+      
     });
-
-    isLoading = false;
-    console.log(isLoading);
 
 });
 
@@ -136,4 +133,24 @@ let progress = setInterval(() => {
     clearInterval(progress);
   }
 }, 60);
+}
+
+//show link
+function linkView(){
+ let linkView = `<div class="linkView">
+ <div id="sample">${link}</div>
+ <br />
+ <div class="button">
+   <button type="button" id="copyText" onclick="copyText()">
+     Copy
+   </button>
+ </div>`
+ dropArea.innerHTML = linkView
+}
+
+function copyText() {
+      
+  /* Copy text into clipboard */
+  navigator.clipboard.writeText
+      ("Geeksforgeeks is best learning platform.");
 }
