@@ -7,8 +7,6 @@ let isLoading = false;
 
 // Select your input type file and store it in a variable
 let input = document.getElementById('file');
-let inputFirstFile = input.files
-const submitForm = document.querySelector('input[type="submit"]');
 
 //UPLOAD FILE and send response to a variable
 //browse file
@@ -17,7 +15,7 @@ button.onclick = () => input.click();//on click open file selector
 
 // submit file button
 const submitBtn= document.getElementById("submit-btn");
-submitBtn.onclick = () => submitForm.click();
+
 
 
 
@@ -55,7 +53,7 @@ form.addEventListener("submit", async function (event) {
     .catch((error) => {
       console.error("Error:", error);// Handle the error response object
     });
-    form.reset()
+
     isLoading = false;
     console.log(isLoading);
 
@@ -123,6 +121,19 @@ function progressBar(){
  let progressIndicator= document.querySelector(".progressIndicator");
   progressIndicator.style.animation = "progress 6s";
   progressIndicator.style.width = "100%";
-  document.querySelector(".close").style.display = "none";
-  document.querySelector(".success").style.display = "block";
+  setTimeout(function () {document.querySelector(".close").style.display = "none";
+  document.querySelector(".success").style.display = "block"; }, 6000);
+  progressBarPercent();
+}
+
+function progressBarPercent() {
+let progressValue = 0
+let progressText= document.querySelector('.progressPerc')
+let progress = setInterval(() => {
+  progressValue++;
+  progressText.innerHTML=(`${progressValue}%`);
+  if (progressValue === 100) {
+    clearInterval(progress);
+  }
+}, 60);
 }
