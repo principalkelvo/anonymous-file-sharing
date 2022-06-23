@@ -109,6 +109,7 @@ function showFile() {
   }
 }
 
+const progressSpeed =6000
 //progressBar
 function progressBar() {
   let progressIndicator = document.querySelector(".progressIndicator");
@@ -117,9 +118,11 @@ function progressBar() {
   setTimeout(function () {
     document.querySelector(".close").style.display = "none";
     document.querySelector(".success").style.display = "block";
-  }, 6000);
+  }, progressSpeed);
   progressBarPercent();
 }
+
+const speed = progressSpeed / 100;
 
 function progressBarPercent() {
   let progressValue = 0;
@@ -130,7 +133,7 @@ function progressBarPercent() {
     if (progressValue === 100) {
       clearInterval(progress);
     }
-  }, 60);
+  }, speed);
 }
 
 //show link
@@ -147,13 +150,18 @@ function linkView() {
 }
 // const copyText = document.getElementById("copyText");
 
+//selecting appended button
 document.addEventListener('click', function(e){
-  console.log(e.target.id)
+  // console.log(e.target.id)
+  //selects the clicked target with id
   if(e.target.id === 'copyText'){
        //do something
        e.preventDefault();
-       
+       setTimeout(function(){
+       document.getElementById('copyText').textContent = 'Copied';
+       }, 30);
+
        /* Copy text into clipboard */
-       navigator.clipboard.writeText("This is the best learning platform.");
-  }
+       navigator.clipboard.writeText(`${link}`);
+      }
 });
