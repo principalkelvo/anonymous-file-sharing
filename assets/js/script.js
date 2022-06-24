@@ -17,6 +17,7 @@ button.onclick = () => input.click(); //on click open file selector
 // submit file button
 const submitBtn = document.getElementById("submit-btn");
 
+
 //submit the form
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
@@ -79,6 +80,8 @@ input.addEventListener("change", function () {
   file = input.files[0];
   dropArea.classList.add("active");
   console.log(file);
+  let fileNameText = document.querySelector(".fileName p");
+  fileNameText.innerHTML = file.name;
   showFile(); //calling function
 });
 
@@ -127,9 +130,17 @@ function showFile() {
   }
 }
 
+//hide progressBar div
+const fileViewProgress = document.querySelector(".fileView");
+
+fileViewProgress.style.display = "none";
+
+
 const progressSpeed =6000
 //progressBar
 function progressBar() {
+fileViewProgress.style.display = "block";
+
   let progressIndicator = document.querySelector(".progressIndicator");
   progressIndicator.style.animation = "progress 6s";
   progressIndicator.style.width = "100%";
@@ -144,7 +155,7 @@ const speed = progressSpeed / 100;
 
 function progressBarPercent() {
   let progressValue = 0;
-  let progressText = document.querySelector(".progressPerc");
+  let progressText = document.querySelector(".progressPerc p");
   let progress = setInterval(() => {
     progressValue++;
     progressText.innerHTML = `${progressValue}%`;
