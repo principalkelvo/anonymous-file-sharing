@@ -89,6 +89,13 @@ p {
   width: 100%;
   box-shadow: -3px 21px 13px -9px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+
+  transition: .3s all ease;
+}
+
+.button button:hover { 
+  background: var(--light);
+
 }
 
 .upload.button {
@@ -96,13 +103,21 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: .3s all ease;
 }
+
 
 .upload.button button {
   background: var(--light);
   margin: 1em 0;
   width: 70%;
 }
+
+.upload.button button:hover {
+  background: var(--dark);
+}
+
 
 .showUploads .fileUpload {
   display: flex;
@@ -111,9 +126,15 @@ p {
   padding: 0.5rem;
   margin: 0.5rem 0;
 
-  /* hover */
-  box-shadow: 0px 4px 13px 1px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
+  transition: .3s all ease;
+
+}
+
+.showUploads .fileUpload:hover{
+    /* hover */
+    box-shadow: 0px 4px 13px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+
 }
 
 .showUploads .fileUpload .fileType {
