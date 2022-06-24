@@ -1,7 +1,10 @@
 // Select your form for submition
 let form = document.getElementById("form");
+//creates a file which we will use globally
 let file;
+//the link from response
 let link;
+//form submitting to prevent double submission
 let formSubmiting = false;
 // Select your input type file and store it in a variable
 let input = document.getElementById("file");
@@ -20,16 +23,21 @@ form.addEventListener("submit", async function (event) {
   // create a formdata object
   // console.log("formdata"+" what is uploaded")
   // console.log(input.files[0]);
-  console.log(file);
+  // console.log(file);
   // console.log("formdata"+" what has been uploaded")
 
+  //check if form has been uploaded/ and if file is empty
   if(file!==undefined && formSubmiting===false){
+    //makes sure that the form submission starts
   formSubmiting= true
 
+  submitBtn.disabled= true;
+
+  //create a form data for post
   let data = new FormData();
   // data.append("file", input.files[0]);
   data.append("file", file);
-  console.log(data);
+  // console.log(data);
   await fetch("https://file.io", {
     // Your POST endpoint
     
@@ -46,7 +54,9 @@ form.addEventListener("submit", async function (event) {
       console.log("Success:", result); // Handle the success response object
       if (result) {
         link = result.link;
+        //progress bar called
         progressBar();
+        //returns link
         linkView();
       } // Handle the success response object}
     })
