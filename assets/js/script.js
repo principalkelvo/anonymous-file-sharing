@@ -2,7 +2,7 @@
 let form = document.getElementById("form");
 let file;
 let link;
-
+let formSubmiting = false;
 // Select your input type file and store it in a variable
 let input = document.getElementById("file");
 
@@ -20,16 +20,19 @@ form.addEventListener("submit", async function (event) {
   // create a formdata object
   // console.log("formdata"+" what is uploaded")
   // console.log(input.files[0]);
-  // console.log(file);
+  console.log(file);
   // console.log("formdata"+" what has been uploaded")
+
+  if(file!==undefined && formSubmiting===false){
+  formSubmiting= true
 
   let data = new FormData();
   // data.append("file", input.files[0]);
   data.append("file", file);
   console.log(data);
-
   await fetch("https://file.io", {
     // Your POST endpoint
+    
     method: "POST", // or 'PUT'
     headers: {
       /*One needs to omit content-type header for the Fetch request. 
@@ -49,8 +52,12 @@ form.addEventListener("submit", async function (event) {
     })
     .catch((error) => {
       console.error("Error:", error); // Handle the error response object
-      alert("Error! Try again later");
+      alert("Error! Try again later \n" + error.message);
     });
+  }
+  else{
+    alert("File not Found")
+  }
 });
 
 //drag and drop
@@ -89,7 +96,8 @@ dropArea.addEventListener("drop", (event) => {
 //file preview
 function showFile() {
   let fileType = file.type; //getting selected file type
-  let validExtensions = ["image/jpeg", "image/jpg", "image/png"]; //adding some valid image extensions in array
+  console.log("file type: " + fileType);
+  let validExtensions = ["image/jpeg", "image/jpg", "image/png", "application/zip"]; //adding some valid image extensions in array
   if (validExtensions.includes(fileType)) {
     //if user selected file is an image file
     let fileReader = new FileReader(); //creating new FileReader object
