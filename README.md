@@ -9,6 +9,9 @@ Upload Files Page was created and is maintained by **Kelvin Njoro**
 * [Twitter](https://twitter.com/kelvinprincipal/)
 * [Github](https://github.com/principalkelvo/)
 * [Facebook](https://facebook.com/principal.kelvin1/)
+* [Youtube](https://www.youtube.com/channel/UCtFlIkYU5mIPPWI-bWSIgVg)
+* [Medium](https://medium.com/@principalkelvo)
+* [buymeacoffee](https://www.buymeacoffee.com/kelvinnjoro)
 
 ## Design
 
@@ -52,7 +55,12 @@ For full design click [image](https://www.figma.com/file/gy6b2ASwlPJkb0W9UsPyIE/
 > To view the website,
 
 * Click [Here](https://principalkelvo.github.io/anonymous-file-sharing/) **or**
-* Copy the link https://principalkelvo.github.io/anonymous-file-sharing/ paste to your browser and load it
+* Copy the link <https://principalkelvo.github.io/anonymous-file-sharing/> paste to your browser and load it
+
+> How to navigate
+
+* [Blog](https://medium.com/@principalkelvo/how-to-upload-and-share-files-anonymously-22b91ff8461d)
+* [Youtube](https://youtu.be/hzzf2KhRknc)
 
 ### Built with
 
@@ -75,10 +83,10 @@ For full design click [image](https://www.figma.com/file/gy6b2ASwlPJkb0W9UsPyIE/
 
 ## Credits
 
-* [Google Fonts](https://fonts.google.com/) - Chivo and Lora
+* [Google Fonts](https://fonts.google.com/) - Inter
 * [File.io API](https://file.io/)
 
 ## License
 
 > Use it freely but please do not republish, distribute or sell
->Thats it! Simple, clean and smooth!
+> Thats it! Simple, clean and smooth!
